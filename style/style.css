@@ -1,7 +1,20 @@
+@font-face {
+    font-family: "Noto Sans KR";
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
+    font-weight: 500;
+    font-weight: 700;
+    font-style: normal;
+}
+
 #app {
     background: #eae8fe;
     width: 100%;
     height: 963px;
+
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .title {
@@ -9,13 +22,13 @@
 }
 
 .img-title {
-    width: 436px;
-    height: 204px;
+    width: 386px;
+    height: 180px;
 }
 
 .cont-machine {
     position: relative;
-    top: 67px;
+    top: 62px;
 
     display: flex;
     justify-content: center;
@@ -23,7 +36,7 @@
     background-color: yellowgreen;
 }
 
-.cont-input {
+.cont-select {
     background-color: white;
 
     width: 360px;
@@ -32,7 +45,7 @@
 }
 
 .cont-result {
-    background-color: white;
+    background-color: aquamarine;
 
     margin: auto 14px;
 
@@ -41,4 +54,33 @@
 
     display: flex;
     flex-direction: column;
+}
+
+.cont-result .cont-money {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    padding: 9px 27px;
+    box-sizing: border-box;
+}
+
+.cont-money .txt-money {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eae8fe;
+    padding: 0 10px;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.txt-money .input-money {
+    font-weight: 700;
+}
+
+.cont-result .cont-get {
+    background-color: violet;
+    width: 100%;
+    height: 474px;
+    margin-top: auto;
 }
