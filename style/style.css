@@ -1,0 +1,44 @@
+#app {
+    background: #eae8fe;
+    width: 100%;
+    height: 963px;
+}
+
+.title {
+    text-align: center;
+}
+
+.img-title {
+    width: 436px;
+    height: 204px;
+}
+
+.cont-machine {
+    position: relative;
+    top: 67px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: yellowgreen;
+}
+
+.cont-input {
+    background-color: white;
+
+    width: 360px;
+    height: 545px;
+    margin: auto 14px;
+}
+
+.cont-result {
+    background-color: white;
+
+    margin: auto 14px;
+
+    width: 360px;
+    height: 545px;
+
+    display: flex;
+    flex-direction: column;
+}
