@@ -1,10 +1,4 @@
-@font-face {
-    font-family: "Noto Sans KR";
-    src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
-    font-weight: 500;
-    font-weight: 700;
-    font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
 
 #app {
     background: #eae8fe;
@@ -28,7 +22,7 @@
 
 .cont-machine {
     position: relative;
-    top: 62px;
+    top: 68px;
 
     display: flex;
     justify-content: center;
@@ -44,9 +38,8 @@
     margin: auto 14px;
 }
 
+/* cont-result */
 .cont-result {
-    background-color: aquamarine;
-
     margin: auto 14px;
 
     width: 360px;
@@ -56,6 +49,7 @@
     flex-direction: column;
 }
 
+/* cont-money */
 .cont-result .cont-money {
     background-color: white;
     width: 100%;
@@ -77,10 +71,87 @@
 .txt-money .input-money {
     font-weight: 700;
 }
+/* //cont-money */
 
+/* cont-get */
 .cont-result .cont-get {
-    background-color: violet;
+    background-color: white;
     width: 100%;
     height: 474px;
     margin-top: auto;
+    padding: 0px 27px;
 }
+
+.cont-get .get-title {
+    margin: 25px 0 13px;
+    text-align: center;
+    font-size: inherit;
+}
+
+.drink-list {
+    display: flex;
+    flex-direction: column;
+    padding: 11px;
+
+    width: 100%;
+    height: 364px;
+    background-color: #eae8fe;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+
+    overflow-y: scroll;
+    scrollbar-color: blue red;
+}
+
+.drink-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.drink-item .img-drink {
+    width: 18px;
+    height: 33px;
+    /* position: absolute;
+    inset: 0; */
+    margin: 6px 10px;
+}
+
+.drink-item .txt-name {
+    font-size: 9px;
+    line-height: 13px;
+    margin-right: auto;
+}
+
+.drink-item .txt-cnt {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    padding: 3px 10px 5px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.drink-item + .drink-item {
+    margin-top: 6px;
+}
+
+.cont-get .txt-total {
+    float: right;
+    position: relative;
+    top: 7px;
+    font-size: 12px;
+    line-height: 17px;
+}
+/* //cont-get */
+/* //cont-result */
