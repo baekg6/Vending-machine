@@ -4,140 +4,169 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vending Machine</title>
+        <title>Vending machine</title>
         <link rel="stylesheet" href="style/reset.css" />
         <link rel="stylesheet" href="style/style.css" />
     </head>
     <body>
-        <section id="app">
-            <h1 class="title"><img src="images/logo.png" alt="Cola Cola 자판기" class="img-title" /></h1>
-            <section class="cont-machine">
-                <h2 class="txt-hide">자판기</h2>
-                <section class="cont-select">
-                    <h3 class="txt-hide">음료 선택창</h3>
-                    <ul class="item-list">
-                        <li class="select-item select-on">
-                            <img src="images/original_cola.png" alt="" class="img-item" />
+        <div id="app">
+            <!-- header -->
+            <header class="header">
+                <h1 class="title"><img src="images/logo.svg" alt="Cola Cola" class="img-title" /></h1>
+            </header>
+            <!-- //header -->
+
+            <!-- main -->
+            <main class="main">
+                <!-- cont-vending -->
+                <section class="cont-vending">
+                    <h2 class="txt-hide">자판기</h2>
+
+                    <!-- select-list -->
+                    <ul class="select-list">
+                        <li class="item-select">
+                            <img src="images/Original_Cola.svg" alt="" class="img-drink" />
                             <p class="txt-name">Original_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
-                        <li class="select-item">
-                            <img src="images/violet_cola.png" alt="" class="img-item" />
-                            <p class="txt-name">Vioilet_Cola</p>
+                        <li class="item-select item-sold_out">
+                            <img src="images/Violet_Cola.svg" alt="" class="img-drink" />
+                            <p class="txt-name">Violet_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
-                        <li class="select-item">
-                            <img src="images/yellow_cola.png" alt="" class="img-item" />
+                        <li class="item-select">
+                            <img src="images/Yellow_Cola.svg" alt="" class="img-drink" />
                             <p class="txt-name">Yellow_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
-                        <li class="select-item">
-                            <img src="images/cool_cola.png" alt="" class="img-item" />
+                        <li class="item-select">
+                            <img src="images/Cool_Cola.svg" alt="" class="img-drink" />
                             <p class="txt-name">Cool_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
-                        <li class="select-item select-on">
-                            <img src="images/green_cola.png" alt="" class="img-item" />
+                        <li class="item-select">
+                            <img src="images/Green_Cola.svg" alt="" class="img-drink" />
                             <p class="txt-name">Green_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
-                        <li class="select-item">
-                            <img src="images/orange_cola.png" alt="" class="img-item" />
+                        <li class="item-select">
+                            <img src="images/Orange_Cola.svg" alt="" class="img-drink" />
                             <p class="txt-name">Orange_Cola</p>
                             <p class="txt-price">1000원</p>
                         </li>
                     </ul>
-                    <div class="cont-info">
-                        <div class="txt-money grid-wide">
-                            <p>잔액 :</p>
-                            <p>1,000 원</p>
-                        </div>
-                        <button class="btn-money">거스름돈 반환</button>
-                        <input type="number" placeholder="입금액 입력" class="inp-money grid-wide" />
-                        <button class="btn-money">입금</button>
-                        <ul class="drink-list grid-wide scb">
-                            <li class="drink-item">
-                                <img src="images/original_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Original_Cola</p>
-                                <p class="txt-cnt">1</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/green_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Green_Cola</p>
-                                <p class="txt-cnt">2</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/orange_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Orange_Cola</p>
-                                <p class="txt-cnt">1</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/violet_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Vioilet_Cola</p>
-                                <p class="txt-cnt">5</p>
-                            </li>
-                        </ul>
-                        <button class="btn-money btn_violet">획득</button>
-                    </div>
-                </section>
+                    <!-- //select-list -->
 
-                <section class="cont-result">
-                    <div class="cont-money">
-                        <div class="txt-money">
-                            <p>소지금 :</p>
-                            <p class="input-money">25,000 원</p>
+                    <!-- cont-info -->
+                    <div class="cont-info">
+                        <div class="txt-left_money grid-wide">
+                            <p>잔액 :</p>
+                            <p><span id="left-money">1,000</span> 원</p>
                         </div>
-                    </div>
-                    <div class="cont-get">
-                        <h2 class="get-title">획득한 음료</h2>
-                        <ul class="drink-list scb">
-                            <li class="drink-item">
-                                <img src="images/original_cola.png" alt="" class="img-drink" />
+
+                        <button class="btn-change">거스름돈 반환</button>
+
+                        <input type="number" placeholder="입금액 입력" class="inp-deposit grid-wide" />
+
+                        <button class="btn-deposit">입금</button>
+
+                        <ul class="list-drink grid-wide scb">
+                            <li class="item-drink">
+                                <img src="images/Original_Cola.svg" alt="" class="img-drink" />
                                 <p class="txt-name">Original_Cola</p>
                                 <p class="txt-cnt">1</p>
                             </li>
-                            <li class="drink-item">
-                                <img src="images/green_cola.png" alt="" class="img-drink" />
+                            <li class="item-drink">
+                                <img src="images/Green_Cola.svg" alt="" class="img-drink" />
                                 <p class="txt-name">Green_Cola</p>
                                 <p class="txt-cnt">2</p>
                             </li>
-                            <li class="drink-item">
-                                <img src="images/orange_cola.png" alt="" class="img-drink" />
+                            <li class="item-drink">
+                                <img src="images/Orange_Cola.svg" alt="" class="img-drink" />
                                 <p class="txt-name">Orange_Cola</p>
                                 <p class="txt-cnt">1</p>
                             </li>
-                            <li class="drink-item">
-                                <img src="images/violet_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Vioilet_Cola</p>
+                            <li class="item-drink">
+                                <img src="images/Violet_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Violet_Cola</p>
                                 <p class="txt-cnt">5</p>
                             </li>
-                            <!-- 스크롤바 테스트 -->
-                            <li class="drink-item">
-                                <img src="images/original_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Original_Cola</p>
-                                <p class="txt-cnt">1</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/green_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Green_Cola</p>
-                                <p class="txt-cnt">2</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/orange_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Orange_Cola</p>
-                                <p class="txt-cnt">1</p>
-                            </li>
-                            <li class="drink-item">
-                                <img src="images/violet_cola.png" alt="" class="img-drink" />
-                                <p class="txt-name">Vioilet_Cola</p>
-                                <p class="txt-cnt">5</p>
-                            </li>
-                            <!-- //스크롤바 테스트 -->
                         </ul>
-                        <p class="txt-total">총금액 : 9,000 원</p>
+
+                        <button class="btn-get btn_violet">획득</button>
                     </div>
+                    <!-- //cont-info -->
                 </section>
-            </section>
-        </section>
+                <!-- //cont-vending -->
+
+                <!-- cont-result -->
+                <section class="cont-result">
+                    <h2 class="txt-hide">결과창</h2>
+                    <!-- cont-money -->
+                    <section class="cont-money">
+                        <div class="box-money">
+                            <h3>소지금 :</h3>
+                            <p class="txt-money"><span id="user-money">25,000</span> 원</p>
+                        </div>
+                    </section>
+                    <!-- //cont-money -->
+
+                    <!-- cont-get -->
+                    <section class="cont-get">
+                        <h3 class="tit-get">획득한 음료</h3>
+
+                        <ul class="list-drink scb">
+                            <li class="item-drink">
+                                <img src="images/Original_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Original_Cola</p>
+                                <p class="txt-cnt">1</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Green_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Green_Cola</p>
+                                <p class="txt-cnt">2</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Orange_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Orange_Cola</p>
+                                <p class="txt-cnt">1</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Violet_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Violet_Cola</p>
+                                <p class="txt-cnt">5</p>
+                            </li>
+
+                            <!-- scroll-test -->
+                            <li class="item-drink">
+                                <img src="images/Original_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Original_Cola</p>
+                                <p class="txt-cnt">1</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Green_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Green_Cola</p>
+                                <p class="txt-cnt">2</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Orange_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Orange_Cola</p>
+                                <p class="txt-cnt">1</p>
+                            </li>
+                            <li class="item-drink">
+                                <img src="images/Violet_Cola.svg" alt="" class="img-drink" />
+                                <p class="txt-name">Violet_Cola</p>
+                                <p class="txt-cnt">5</p>
+                            </li>
+                            <!-- //scroll-test -->
+                        </ul>
+                        <p class="txt-total">총금액 : <span id="total-money">9,000</span> 원</p>
+                    </section>
+                    <!-- //cont-get -->
+                </section>
+                <!-- //cont-result -->
+            </main>
+            <!-- //main -->
+        </div>
     </body>
 </html>
