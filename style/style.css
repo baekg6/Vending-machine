@@ -9,6 +9,7 @@
     --gray: #bdbdbd;
 
     /* font size */
+    /* 기본만 변수로 선언하고 rem으로 리팩하기 */
     --xxl: 20px;
     --xl: 18px;
     --lg: 14px;
@@ -37,6 +38,9 @@
     overflow: hidden;
 }
 
+html {
+    font-size: 16px;
+}
 /* design */
 body {
     background: var(--sec);
@@ -230,7 +234,7 @@ body {
     margin-right: auto;
     font-size: var(--base);
     line-height: var(--mid);
-    -webkit-transform: scale(0.83);
+    -webkit-transform: scale(0.9);
 }
 .item-drink .txt-count {
     margin: 7px;
