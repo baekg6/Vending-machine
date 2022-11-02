@@ -3,23 +3,11 @@
 /* setting */
 :root {
     /* color */
-    --pri: #6327fe;
-    --sec: #eae8fe;
-    --ter: #fff;
-    --gray: #bdbdbd;
+    --main-color: #6327fe;
+    --bg-color: #eae8fe;
+    --base-color: #fff;
+    --border-color: #bdbdbd;
 
-    /* font size */
-    /* 기본만 변수로 선언하고 rem으로 리팩하기 */
-    --xxl: 20px;
-    --xl: 18px;
-    --lg: 14px;
-    --mid: 13px;
-    --sm: 12px;
-    --base: 10px;
-
-    /* font weight */
-    --bold: 700;
-    --medium: 500;
 }
 
 /* reset */
@@ -43,38 +31,42 @@ html {
 }
 /* design */
 body {
-    background: var(--sec);
 
     font-family: "Noto Sans KR", sans-serif;
-    font-size: var(--lg);
-    font-weight: var(--medium);
-    line-height: var(--mid);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;;
 }
 
 .header {
-    margin-bottom: 68px;
-    text-align: center;
+    display:flex;
+    justify-content: center;
 }
 
 .header .img-title {
-    width: 386px;
-    height: 180px;
+    width:166px;
+    height:78px;
 }
 
 .main {
     display: flex;
     justify-content: center;
+    
     flex-wrap: wrap;
-    gap: 28px;
+
+    padding: 18px 27px;
+    gap: 0px;
 }
 
 .cont-vending {
-    background: var(--ter);
+    background: var(--base-color);
     display: flex;
     flex-direction: column;
     flex: 0 0 360px;
-    height: 545px;
-    padding: 31px 27px 28px;
+
+    height: fit-content;
+    padding: 0px 27px 11px;
+    gap: 0px;
 }
 
 .list-select {
@@ -103,19 +95,19 @@ body {
     height: 65px;
 }
 .item-select .txt-name {
-    font-size: var(--base);
-    line-height: var(--mid);
-    -webkit-transform: scale(0.83);
+    font-size: 10px;
+    line-height: 13px;
+    -webkit-transform: scale(0.9);
 }
-.item-select .txt-price {
+.item-select .txt-main-colorce {
     width: 70px;
     padding: 5px 15px;
 
-    background: var(--pri);
+    background: var(--main-color);
     border-radius: 50px;
 
-    font-size: var(--sm);
-    line-height: var(--sm);
+    font-size: 12px;
+    line-height: 12px;
     color: white;
     text-align: center;
 }
@@ -123,7 +115,7 @@ body {
 .item-select:hover,
 .item-select:active,
 .item-select.selected {
-    outline: 3px solid var(--pri);
+    outline: 3px solid var(--main-color);
 }
 
 .item-select.sold-out::after {
@@ -147,7 +139,6 @@ body {
     grid-template-rows: 32px 32px 106px;
     gap: 12px;
 
-    line-height: var(--xxl);
 }
 
 .grid-wide {
@@ -159,12 +150,12 @@ body {
     display: flex;
     justify-content: space-between;
 
-    background: var(--sec);
+    background: var(--bg-color);
     border-radius: 5px;
 }
 
 .cont-info button {
-    background: var(--ter);
+    background: var(--base-color);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border: transparent;
     border-radius: 5px;
@@ -174,17 +165,17 @@ body {
 }
 
 .cont-info .btn_violet {
-    background: var(--pri);
-    color: var(--ter);
+    background: var(--main-color);
+    color: var(--base-color);
 }
 
 .inp-deposit {
     padding: 6px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 .inp-deposit::placeholder {
-    color: var(--gray);
+    color: var(--border-color);
 }
 
 .list-drink {
@@ -195,8 +186,8 @@ body {
     flex-direction: column;
     gap: 6px;
 
-    background: var(--sec);
-    border: 1px solid var(--gray);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
     overflow-y: scroll;
@@ -221,7 +212,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background: var(--ter);
+    background: var(--base-color);
     border-radius: 5px;
 }
 
@@ -232,8 +223,8 @@ body {
 }
 .item-drink .txt-name {
     margin-right: auto;
-    font-size: var(--base);
-    line-height: var(--mid);
+    font-size: 10px;
+    line-height: 13px;
     -webkit-transform: scale(0.9);
 }
 .item-drink .txt-count {
@@ -241,11 +232,11 @@ body {
     padding: 3px 10px 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 
     font: inherit;
-    line-height: var(--xxl);
+    line-height: 20px;
 }
 
 .cont-result {
@@ -253,7 +244,8 @@ body {
     display: flex;
     flex-direction: column;
     flex: 0 0 360px;
-    gap: 20px;
+    gap: 7px;
+
 }
 
 .cont-money {
@@ -261,8 +253,8 @@ body {
     width: 100%;
     height: 50px;
 
-    background: var(--ter);
-    font-size: var(--lg);
+    background: var(--base-color);
+    font-size:14px;
 }
 
 .box-money {
@@ -273,12 +265,12 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background: var(--sec);
+    background: var(--bg-color);
     border-radius: 5px;
 }
 
 .box-money .txt-money {
-    font-weight: var(--bold);
+    font-weight: 700;
 }
 
 .cont-get {
@@ -288,14 +280,14 @@ body {
     display: flex;
     flex-direction: column;
 
-    background: var(--ter);
+    background: var(--base-color);
 }
 
 .tit-get {
     margin-bottom: 13px;
 
     text-align: center;
-    font-weight: var(--bold);
+    font-weight: 700;
 }
 
 .cont-get .list-drink {
@@ -305,38 +297,38 @@ body {
 .txt-total {
     margin-top: 6px;
 
-    font-size: var(--sm);
+    font-size: 12px;
     text-align: right;
 }
 
 /* media query */
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 361px) {
     body {
         padding: 0 27px;
-        background: var(--ter);
+        background: var(--bg-color);
     }
 
     .header {
-        margin: 0;
+        margin-bottom: 68px;
+        text-align: center;
     }
 
     .header .img-title {
-        width: 166px;
-        height: 71px;
+        width: 386px;
+        height: 180px;
     }
 
     .main {
-        padding: 18px 27px;
-        gap: 0px;
+        gap: 28px;
     }
 
-    .cont-vending {
-        height: fit-content;
-        padding: 0px 27px 11px;
-        gap: 0px;
+    .cont-vending {    
+        height: 545px;
+        padding: 31px 27px 28px;
     }
 
     .cont-result {
-        gap: 7px;
+        gap: 20px;
+
     }
 }
