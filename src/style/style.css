@@ -56,6 +56,7 @@ body {
 .vending-machine .list-item {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 130px;
   gap: 12px;
 }
 
@@ -92,6 +93,47 @@ body {
   outline: 3px solid #6327fe;
 }
 
+.vending-machine .btn-item .img-item.bg-Original_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -610px -2px;
+  background-size: 230px;
+}
+
+.vending-machine .btn-item .img-item.bg-Violet_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -651px -2px;
+  background-size: 230px;
+}
+
+.vending-machine .btn-item .img-item.bg-Yellow_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -2px -126px;
+  background-size: 230px;
+}
+
+.vending-machine .btn-item .img-item.bg-Cool_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -2px -56px;
+  background-size: 230px;
+}
+
+.vending-machine .btn-item .img-item.bg-Green_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -527px -2px;
+  background-size: 230px;
+}
+
+.vending-machine .btn-item .img-item.bg-Orange_Cola {
+  width: 38px;
+  height: 66px;
+  background: url('../images/css_sprites.png') -569px -2px;
+  background-size: 230px;
+}
 .vending-machine .list-item .img-item {
   width: 36px;
   height: 65px;
@@ -261,12 +303,4 @@ body {
   #app .tit-app {
     width: 166px;
   }
-}
-
-.sprite-item {
-  outline: 1px solid red;
-  width: 36px;
-  height: 65px;
-  background: url('../images/css_sprites.png') -611px -3px;
-  background-size: 230px;
 }

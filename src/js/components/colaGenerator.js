@@ -33,8 +33,8 @@ class ColaGenerator {
       //       </button>
       //       `;
       const itemTemplate = `
-            <button type="button" class="btn-item" data-item="${el.name}" data-count="${el.count}" data-price="${el.cost}" data-img="${el.img}">
-                <div class="sprite-item bg-${el.img}"></div>
+            <button type="button" class="btn-item"  data-item="${el.name}" data-count="${el.count}" data-price="${el.cost}" data-img="${el.img}">
+                <span class="img-item bg-${el.img}"></span>
                 <strong class="tit-item">${el.name}</strong>
                 <span class="txt-price">${el.cost}원</span>
             </button>
