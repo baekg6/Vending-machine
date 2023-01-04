@@ -262,3 +262,11 @@ body {
     width: 166px;
   }
 }
+
+.sprite-item {
+  outline: 1px solid red;
+  width: 36px;
+  height: 65px;
+  background: url('../images/css_sprites.png') -611px -3px;
+  background-size: 230px;
+}
